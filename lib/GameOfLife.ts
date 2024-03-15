@@ -233,10 +233,7 @@ export class GameOfLife {
    *
    * @returns ExitFlag that determines if the simulation is over or not
    */
-  private async step() {
-    // Sleep between each generation
-    await sleep(this.delay);
-
+  private step() {
     console.clear();
     console.log("Welcome to (modded) Conway's Game of Life!");
     console.log(
@@ -339,6 +336,8 @@ export class GameOfLife {
   async simulate() {
     let exitFlag = false;
     do {
+      // Sleep between each generation
+      await sleep(this.delay);
       exitFlag = await this.step();
     } while (!exitFlag);
   }
