@@ -2,12 +2,7 @@
 
 Conway's Game of Life with modifications.
 
-### 📦 Precompiled binaries
-
-I've already compiled the binaries for Windows, and you can simply run the
-executable.
-
-### 🚀 Using the Deno runtime
+### 🚀 Installing the Deno runtime
 
 You need to have the [Deno](https://deno.com/) runtime installed.
 
@@ -22,10 +17,21 @@ curl -fsSL https://deno.land/install.sh | sh
 curl -fsSL https://deno.land/install.sh | sh
 ```
 
-Now from the project directory run:
+### ⚙️ Execution
+
+The default values for grid rows, columns and execution delay can be customized
+through execution flags.
+
+- `--rows` Number of rows in the cell grid (optional)
+- `--cols` Number of columns in the cell grid (optional)
+- `--delay` Time duration between two successive generations in milliseconds
+  (optional)
 
 ```
-deno run main.ts
+# Examples
+deno run main.ts --rows=20 --cols=25 --delay=100
+
+deno run main.ts --delay=10
 ```
 
 ### 🔧 Building from source
