@@ -14,7 +14,7 @@ import {
   CauseOfResurrection,
   CellState,
   StateUpdatePayload,
-} from "./Cell.ts";
+} from "./typings.ts";
 import { randomFrom, sleep } from "./utils.ts";
 
 /**
